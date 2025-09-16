@@ -1,0 +1,115 @@
+body{
+
+    font-family: 'MICEMyungjo';
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 210px 60px auto 84px;
+    grid-template-areas:
+        "header header header"
+        "major major major"
+        "aside1 subject aside2"
+        "footer footer footer";
+}
+
+/* grid ì˜ì— ë°˜ì˜ */
+#top{
+    grid-area: header;
+}
+#major{
+    grid-area: major;
+    /*background-color: lightsteelblue;*/
+    border-color: #0245A3;
+    border-width: 2px 0.8em;
+    font-size: 0.9em;
+}
+
+#subject{
+    /*     #467ed0; */
+    /*background:#467ed0;*/
+    /*color : #fff;*/
+    grid-area: subject;
+    padding-top : 15px;
+    /*background-color: lightpink;*/
+
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    grid-area: footer;
+    background-color: black;
+    color : white;
+}
+
+#aside1, #aside2{
+    /*      background: #0245A3; */
+}
+
+#aside1{
+    /*background: linear-gradient( to left, #467ed0, skyblue );*/
+    /*     linear-gradient( to left, #0245A3, red ) */
+    grid-area: aside1;
+}
+#aside2{
+    /*background: linear-gradient( to right, #467ed0, skyblue);*/
+    grid-area: aside2;
+}
+
+.sub{
+    /*border-top:0.25px solid;*/
+    border-color: #0245a3;
+    /*     margin: %; */
+    border-style: double;
+    margin: 7px;
+    padding : 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "img info";
+}
+.sub img{
+    grid-area: img;
+    width: 90%;
+    height: 400px;
+    background-size: cover;
+}
+.info{
+    grid-area: info;
+
+    /*     display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; */
+
+    display: grid;
+    grid-template-row: 30% 10% 10% 50%;
+    grid-template-areas:
+    "title"
+    "name"
+    "runtime"
+    "info";
+}
+#title{
+    grid-area: title;
+    border-bottom: groove;
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+#name{
+    grid-area: name;
+    padding-top:15px;
+}
+
+#runtime{
+    grid-area: runtime;
+    padding-top:5px;
+}
+
+#textInfo{
+    grid-area:info;
+    padding-top:30px;
+    word-break: keep-all;
+}

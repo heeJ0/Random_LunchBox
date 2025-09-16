@@ -1,0 +1,152 @@
+body{
+    font-family: 'NotoSerifKR';
+    margin : 0;
+    padding : 0;
+    height : 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 210px 4fr 2fr 84px;
+    grid-template-areas:
+    "header header header"
+    "collegeText collegeText collegeText"
+    "aside1 teamInfo aside2"
+    "footer footer footer"
+;
+}
+
+#top{
+    grid-area: header;
+}
+
+#green{
+    border-bottom : solid 2px navy;
+    font-size:2.5em;
+}
+
+#collegeText{
+    grid-area: collegeText;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 2fr 3fr;
+    grid-template-areas:
+    "collegeImg collegeImg collegeImg"
+    "aside1 information aside2"
+;
+}
+#teamInfo{
+    grid-area: teamInfo;
+    border-top : solid 2px navy;
+}
+.collegeImg{
+    grid-area: collegeImg;
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+}
+#information{
+    grid-area: information;
+    display: grid;
+}
+
+#aside1{
+    grid-area: aside1;
+}
+#aside2{
+    grid-area: aside2;
+}
+footer{
+    grid-area: footer;
+}
+.colImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.colInfo{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-shadow: 2px 2px 6px rgb(0 0 0);
+    font-size: 40px;
+}
+
+.info{
+    padding-bottom:20px;
+    display: grid;
+    grid-template-columns: 230px auto;
+    grid-template-areas: "img text";
+}
+
+.info2{
+    padding-bottom:20px;
+    display: grid;
+    grid-template-columns: auto 230px;
+    grid-template-areas: "text img";
+    text-align: right;
+}
+
+.info2 img{
+    margin-left : 20px;
+}
+
+.img{
+    border-radius:5%;
+    grid-area : img;
+    width: 230px;
+    height: 300px;
+}
+.team{
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 58% 17%;
+    grid-template-areas:
+    "name"
+    "part"
+  "address";
+}
+
+.name{
+    font-size:1.7em;
+    grid-area: name;
+    line-height:75px;
+
+}
+
+.address{
+    grid-area: address;
+}
+
+.part{
+    font-size : 1.2em;
+    grid-area: part;
+}
+
+/* 개별 background */
+#jeong{
+    background: linear-gradient( to right, beige 15%, white);
+    border-radius: 20%;
+    margin-bottom:23px;
+}
+
+#jo{
+    background: linear-gradient( to left, #F7E9D7 15%, white );
+    border-radius: 20%;
+    margin-bottom:30px;
+}
+
+#lee{
+    background: linear-gradient( to right, #e2e5f1 15%, white );
+    border-radius: 20%;
+    margin-bottom:30px;
+}
+
+#hong{
+    background: linear-gradient( to left,#EDEDED 15%, white );
+    border-radius: 20%;
+    margin-bottom: 30px;
+}

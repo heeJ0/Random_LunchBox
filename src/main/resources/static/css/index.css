@@ -1,0 +1,178 @@
+/* 강원교육 */
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.indexText{
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-shadow: 2px 2px 6px rgb(0 0 0);
+    font-size: 25px;
+    font-family: 'NotoSerifKR';
+}
+.slides{
+    grid-area: images;
+    overflow: hidden;
+    position: relative;
+    height: 550px;
+}
+.colVideo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+body{
+    display: grid;
+    grid-template-rows: 210px 561px 660px 84px;
+    grid-template-areas:
+    "header"
+    "one"
+    "two"
+    "footer";
+}
+
+.slide{
+    grid-area: one;
+}
+
+#last{
+    grid-area: two;
+
+    display: grid;
+    grid-template-columns: 450px auto 450px;
+    grid-template-areas:
+    "todo schedule aside";
+}
+
+#todo{
+    margin-right : 35px;
+    font-family: 'NotoSerifKR';
+    grid-area: todo;
+    background-color: #0245A3;
+    color : white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#todo h2{
+    margin-top: 50px;
+}
+#todoList{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#todoList label{
+    margin-top: 40px;
+}
+
+#schedule{
+    grid-area: schedule;
+    margin: 0;
+    padding: 0;
+    width: 936px;
+    height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    /*border-top: 1px solid ;*/
+    /*border-left: 1px solid ;*/
+}
+#schedule div{
+    margin:3px;
+    /*border-radius: 30px 10px 50px;*/
+    font-size: 1em;
+    text-align: center;
+    line-height: 49px;
+    /*border-right: 1px solid ;*/
+    /*border-bottom: 1px solid ;*/
+    font-family: 'GangwonEdu_OTFBoldA';
+    border : 1px solid;
+    color : gray;
+    width:148px;
+    height: 49px;
+}
+
+.slides>input[name=ra] {
+    display: none;
+}
+
+#minilogo{
+    font-family: 'NotoSerifKR';
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 78px;
+}
+
+.sl {
+    display: none;
+    /*background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url("https://bit.ly/3bsnBs2");*/
+    /*background-size: cover;*/
+}
+
+.sl:nth-of-type(1) {
+    display: block;
+}
+
+.sl>img {
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+}
+
+/*.slides{*/
+/*    grid-area: images;*/
+/*}*/
+.page {
+    position:absolute;
+    top:710px;
+    left: 50%;
+
+    text-align: center;
+    grid-area: page;
+}
+
+.page>label {
+    cursor: pointer;
+}
+
+#ra02:checked~.sl:nth-of-type(1) {
+    display: none;
+}
+
+#ra02:checked~.sl:nth-of-type(2) {
+    display: block;
+}
+
+#ra03:checked~.sl:nth-of-type(1) {
+    display: none;
+}
+
+#ra03:checked~.sl:nth-of-type(3) {
+    display: block;
+}
+
+aside{
+    grid-area: aside;
+    margin: auto;
+}
+
+aside img{
+    /* 554*641*/
+    width: 450px;
+}

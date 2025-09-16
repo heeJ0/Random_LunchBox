@@ -1,0 +1,206 @@
+/*시간표*/
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/*body{*/
+/*    display: grid;*/
+/*    grid-template-rows: 210px 200px 34px 1fr 80px;*/
+/*    grid-template-areas:*/
+/*    "header"*/
+/*    "title"*/
+/*    "part1"*/
+/*    "part2"*/
+/*    "footer"*/
+/*;*/
+/*}*/
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 210px 200px auto 84px;
+    grid-template-areas:
+     "header"
+     "title"
+     "lecture_set"
+     "footer"
+;
+}
+#lecture_set{
+    padding-top:40px;
+    padding-bottom: 20px;
+    grid-area: lecture_set;
+    grid-template-rows: 34px auto;
+    grid-template-areas:
+     "part1"
+     "part2";
+}
+.addLecture{
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+}
+.addlectureImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.addlectureInfo{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-shadow: 2px 2px 6px rgb(0 0 0);
+    font-size: 40px;
+}
+#top{
+    grid-area: header;
+}
+#title{
+    grid-area: title;
+    line-height: 200px;
+    vertical-align: text-bottom;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    position: relative;
+    background-image: url("https://bit.ly/2Tx4ToI");
+    background-size: 100% 100%;
+    backbround-repeat : no-repeat;
+    background-position: center center;
+    /*background-size: cover;*/
+    /*background-position: 0px -40px;*/
+    margin-bottom: 10px;
+}
+#part1{
+    grid-area: part1;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    font-family: 'ChosunSm';
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "addschedule message";
+}
+#addschedule{
+    grid-area: addschedule;
+    display: flex;
+    justify-content: center;
+}
+#message{
+    grid-area: message;
+    font-weight: 900;
+}
+#part2{
+    grid-area: part2;
+
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas:
+     "time schedule"
+;
+}
+#major{
+    margin-right: 10px;
+    width: 140px;
+}
+#subject{
+    width: 140px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#hakjum{
+    width: 40px;
+    text-align: right;
+    margin-left: 10px;
+}
+#move{
+    width: 120px;
+    height: 30px;
+    margin-top: -3px;
+    margin-left: 80px;
+}
+#time{
+    grid-area: time;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 840px;
+    height: 880px;
+    border-top: 1px solid darkgray;
+    border-left: 1px solid darkgray;
+}
+#time div{
+    font-family: 'ChosunSm';
+    font-size: 12pt;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    text-align: center;
+    border-right: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+    width: 139px;
+    height: 79px;
+}
+#schedule{
+    grid-area: schedule;
+    text-align: left;
+    width: 210px;
+    border: none;
+}
+#schedule p{
+    border: solid 1px darkgray;
+    border-radius: 20px;
+    height: 50px;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+footer{
+    grid-area: footer;
+}
+.modal_wrap{
+    display: none;
+    width:500px;
+    height:300px;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    margin: -250px -250px;
+    background:#eee;
+    z-index:2;
+    text-align: center;
+    border-radius: 20px;
+}
+#modal_text{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+.modal_wrap button{
+    width: 130px;
+    height: 30px;
+    margin: 30px;
+}
+.black_bg{display: none;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.5);
+    top:0;
+    left:0;
+    z-index:1;
+}

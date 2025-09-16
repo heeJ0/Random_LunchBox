@@ -1,0 +1,90 @@
+/*body{*/
+/*    margin:0;*/
+/*    padding:0;*/
+
+/*    display: grid;*/
+/*    grid-template-columns: 1fr;*/
+/*    grid-template-rows: 210px 80px auto 84px;*/
+/*    grid-template-areas:*/
+/*    "header"*/
+/*    "userName"*/
+/*    "todo"*/
+/*    "footer";*/
+/*}*/
+
+/*#list{*/
+/*    margin: 0 auto;*/
+/*    grid-area: todo;*/
+/*}*/
+
+/*#userName{*/
+/*    text-align: center;*/
+/*    grid-area: userName;*/
+/*}*/
+
+/*input{*/
+/*    margin-top:50px;*/
+/*    padding : 10px;*/
+/*}*/
+
+
+
+/*h2{*/
+/*    font-family: 'MICEMyungjo';*/
+/*}*/
+body{
+    margin:0;
+    padding:0;
+
+    font-family: 'MICEMyungjo';
+    display: grid;
+    grid-template-columns: 250px auto 250px;
+    grid-template-rows: 210px 80px auto 84px;
+    grid-template-areas:
+    "header header header"
+    "aside1 userName aside2"
+    "aside1 todo aside2"
+    "footer footer footer";
+}
+#top{
+    grid-area: header;
+}
+
+#aside1{
+    grid-area: aside1;
+    border-right: solid 1px navy;
+    background: lightcyan;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+aside a{
+    margin-top: 30px;
+}
+#aside2{
+    grid-area:aside2;
+    border-left: solid 1px navy;
+    background: lightcyan;
+}
+
+#list{
+    margin: 0 auto;
+    grid-area: todo;
+}
+
+#userName{
+    text-align: center;
+    grid-area: userName;
+}
+
+input{
+    margin-top:50px;
+    padding : 10px;
+}
+
+h2{
+    font-family: 'MICEMyungjo';
+    margin-top : 50px;
+}

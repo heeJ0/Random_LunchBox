@@ -1,0 +1,47 @@
+body{
+    margin:0;
+    padding:0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 210px auto 84px;
+    grid-template-areas:
+    "header"
+    "board"
+    "footer";
+}
+
+#writeForm{
+    grid-area: board;
+}
+
+form{
+    margin: 30px auto;
+}
+#title, #title2{
+    width: 1000px;
+    height: 50px;
+    margin-bottom : 15px;
+}
+
+textarea{
+    width: 1000px;
+    height: 500px;
+}
+
+
+#submit, #back, #delete, #submit2, #back2, #delete2{
+    width: 150px;
+    height : 50px;
+    margin-right : 10px;
+}
+
+#delete2{
+    margin-left :4px;
+}
+
+#buttons{
+    display:flex;
+    justify-content: center;
+    margin-top : 20px;
+}

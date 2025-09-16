@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input{
+    width: 100%;
+    height: 50px;
+}
+body{
+    font-family: 'Pretendard-Regular';
+    /*font-style: initial;*/
+    /*text-align: center;*/
+    /*padding-top: 30px;*/
+    display: grid;
+    grid-template-rows: 210px auto 80px;
+    grid-template-areas:
+    "header"
+    "section"
+    "footer"
+}
+#top{
+    grid-area: header;
+}
+footer{
+    grid-area: footer;
+}
+
+#join{
+    grid-area: section;
+    font-size:20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "aside1 joinForm aside2";
+}
+#aside1{
+    grid-area: aside1;
+}
+#aside2{
+    grid-area: aside2;
+}
+
+#joinForm{
+
+    grid-area: joinForm;
+
+}
+
+#joinText{
+    /*padding-left: 185px;*/
+    padding-top: 30px;
+    text-align: center;
+}
+form{
+    padding-top: 30px;
+}
+select{
+    width: 100%;
+    height: 50px;
+}
+.btn{
+    background-color: #467ed0;
+    color: white;
+    border-style: none;
+}

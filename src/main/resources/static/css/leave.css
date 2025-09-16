@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'MICEMyungjo';
+    display: grid;
+    grid-template-rows: 210px auto 84px;
+    grid-template-areas:
+    "header"
+    "section"
+    "footer";
+}
+#top{
+    font-family: 'ChosunKg';
+    grid-area: header;
+}
+form{
+    font-size: 30px;
+    grid-area: section;
+    text-align: center;
+    padding: 170px;
+}
+footer{
+    grid-area: footer;
+}
+#pw{
+    height:35px;
+
+
+}
+#usercode{
+    width:145px;
+    height : 35px;
+    font-size : 30px;
+}
+#delbtn,#back{
+    margin-top : 35px;
+    color : white;
+    background-color : #467ed0;
+    width : 150px;
+    height : 40px
+}
